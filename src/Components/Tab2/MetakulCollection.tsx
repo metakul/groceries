@@ -46,7 +46,7 @@ const MetakulCollection = () => {
                   width="200"
                   height="200"
                 />
-                <div className='bg-green relative top-20 right-8'>
+                <div className='bg-blue relative top-20 right-8'>
 
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

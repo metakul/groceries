@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
+import { Container,  } from '@mui/material';
 
 interface MobileTabNavigationProps {
   tabs: { value: ReactNode; content: ReactNode; label: string }[];
@@ -9,7 +10,6 @@ interface MobileTabNavigationProps {
 
 const MobileTabNavigation: React.FC<MobileTabNavigationProps> = ({ tabs }) => {
   const [value, setValue] = React.useState(0);
-
   const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
@@ -28,7 +28,8 @@ const MobileTabNavigation: React.FC<MobileTabNavigationProps> = ({ tabs }) => {
         onChange={handleChange}
         aria-label="mobile tabs example"
         variant="fullWidth"
-        className='bottom-tabs fixed bottom-0 w-full flex flex-row bg-blue z-20'
+        className='bottom-tabs bg-[#0c831f] fixed bottom-0 w-full flex flex-row z-20'
+     
       >
         {tabs.map(({ value }, index) => (
           <Tab key={index} icon={React.createElement('div', null, value)} {...a11yProps(index)} />
@@ -50,15 +51,15 @@ interface CustomTabPanelProps {
 }
 
 const CustomTabPanel: React.FC<CustomTabPanelProps> = ({ children, value, index }) => (
-  <div
+  <Container
     role="tabpanel"
     hidden={value !== index}
     id={`simple-tabpanel-${index}`}
     aria-labelledby={`simple-tab-${index}`}
-    className='ml-12 mb-24 pb-12'
+    className='pl-24 mb-24 pb-12'
   >
     {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
-  </div>
+  </Container>
 );
 
 export default MobileTabNavigation;

@@ -17,7 +17,7 @@ import { ColorModeContext } from "../Theme/themes";
 import { motion } from "framer-motion";
 // const NAV_WIDTH = 280;
 import "./style.css"
-
+import CartButton from "../../Components/Buttons/CartButton";
 interface HeaderProps{
   setIsSidebarOpen: () => void;
 
@@ -48,6 +48,8 @@ interface HeaderProps{
           <MenuIcon />
         </IconButton>
         <Box sx={{ flexGrow: 1 }} />
+        
+          <CartButton/>
         <Stack
           direction="row"
           alignItems="center"

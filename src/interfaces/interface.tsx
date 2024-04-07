@@ -1,5 +1,6 @@
 //pages interface
 import { AxiosRequestConfig } from "axios"
+import { ProductItem } from "../utils/types";
 export interface Layoutprops {
 }
 
@@ -66,8 +67,9 @@ export interface CustomError {
 export interface NFTCollectionState {
   nfts: unknown[];
 }
-export interface BlogsState {
-  blogs: Ipost[];
+export type ItemState= {
+  map(arg0: (product: ProductItem, i: import("react").Key | null | undefined) => import("react/jsx-runtime").JSX.Element): import("react").ReactNode;
+  itemData: ProductItem[]
 }
 
 export interface BalanceItem {
@@ -88,7 +90,7 @@ export interface Ipost  {
   image:string;
   author:string;
   categories: string[];
-  date?: string;
+  price?: string;
 }
 
 export interface FetchBlogData{

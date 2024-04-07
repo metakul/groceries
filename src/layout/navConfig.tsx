@@ -7,6 +7,7 @@ import {
   CalendarMonthOutlined,
   AdminPanelSettingsOutlined,
   PieChartOutlined,
+  FoodBankOutlined
 } from "@mui/icons-material";
 
 export const navConfig = [
@@ -16,45 +17,45 @@ export const navConfig = [
     to: "",
   },
   {
-    text: "Into the Metaverse",
+    text: "Shop By Category",
     icon: null,
     to: "",
   },
   {
-    text: "Mint NFT",
+    text: "Dairy And Breakfast",
     icon: <TodayOutlined />,
-    to: "mint",
+    to: "dairy",
   },
   {
-    text: "Explore",
+    text: "Munchies",
     icon: <ShoppingCartOutlined />,
-    to: "metakul",
+    to: "Munchies",
   },
   {
-    text: "Earn With Nft",
+    text: "Cleaning Essentials",
     icon: <PieChartOutlined />,
-    to: "wallet",
+    to: "cleaning Esentials",
   },
-  // {
-  //   text: "Metaverse",
-  //   icon: null,
-  //   to: "",
-  // },
   {
-    text: "Learn Web3",
+    text: "Atta, Rice & Dal",
+    icon: <FoodBankOutlined/>,
+    to: "atta_rice_dal",
+  },
+  {
+    text: "Personal Wellness",
     icon: <ReceiptLongOutlined />,
-    to: "blogs",
+    to: "personalWellness",
   },
 
   {
-    text: "Extras",
+    text: "Shop by Store",
     icon:null,
     to: "",
   },
   {
-    text: "Profile",
+    text: "Toy Store",
     icon: <AdminPanelSettingsOutlined />,
-    to: "Profile",
+    to: "toyStore",
   },
   {
     text: "KYC",

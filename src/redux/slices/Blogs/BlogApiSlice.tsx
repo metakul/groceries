@@ -1,12 +1,11 @@
 // authActions.tsx
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { setLoadedBlogs } from './BlogSlice';
-import { ApiError } from '../../../interfaces/interface';
+import { setLoadedItems } from './itemCollectionSlice';
+import { ApiError, ItemState } from '../../../interfaces/interface';
 import { ApiEndpoint } from '../../../DataTypes/enums';
 import request from '../../../Backend/axiosCall/apiCall';
 import { ApiSuccess } from '../../../interfaces/interface';
 import { FetchBlogData } from '../../../interfaces/interface';
-import { Ipost } from '../../../interfaces/interface';
 export const fetchBlogApiSlice = createAsyncThunk(
   'blogCollection',
   // eslint-disable-next-line no-empty-pattern
@@ -19,9 +18,9 @@ export const fetchBlogApiSlice = createAsyncThunk(
         headers: ApiEndpoint.GETBLOG.headers
       })
       console.log(response)
-      const blogs:Ipost[] = response.data;
+      const blogs:ItemState = response.data;
 
-      dispatch(setLoadedBlogs({blogData:blogs} ));
+      dispatch(setLoadedItems({itemInfo:blogs} ));
 
       const apiSuccess: ApiSuccess = {
         statusCode: response.status,

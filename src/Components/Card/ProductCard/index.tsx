@@ -1,8 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-import AddToCartButton from '../Buttons/AddToCartButton';
-import { CartProduct, ProductItem } from '../../utils/types';
-import { convertTextToURLSlug } from '../../utils/helper';
-import { Grid } from '@mui/material';
+import AddToCartButton from '../../Buttons/AddToCartButton';
+import { CartProduct, ProductItem } from '../../../utils/types';
+import { convertTextToURLSlug } from '../../../utils/helper';
 
 const ProductCard = ({ data }: { data: ProductItem }) => {
   const navigate = useNavigate();
@@ -25,9 +24,8 @@ const ProductCard = ({ data }: { data: ProductItem }) => {
   };
 
   return (
-    <Grid item xs={4} md={4} lg={3}>
     <div
-      className="_card h-[270px] w-[220px] relative flex cursor-pointer mb-2 mx-auto sm:mx-0"
+      className="_card h-[270px] w-[154px] relative flex cursor-pointer mb-2 mx-auto sm:mx-0"
       onClick={handleProductClick}
     >
       {data.offer && (
@@ -36,7 +34,7 @@ const ProductCard = ({ data }: { data: ProductItem }) => {
         </div>
       )}
       <div className="overflow-hidden text-left flex flex-col mt-auto">
-      <div className="h-[154px] w-154px">
+      <div className="h-[154px] w-[154px]">
         <img src={image_url} alt="" className="h-full w-40 p-2" />
       </div>
         <div className="_text-default text-[13px] font-medium leading-tight line-clamp-2 mb-0.5">
@@ -62,8 +60,6 @@ const ProductCard = ({ data }: { data: ProductItem }) => {
         </div>
       </div>
     </div>
-    </Grid>
-
   );
 };
 

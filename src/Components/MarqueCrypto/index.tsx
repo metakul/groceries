@@ -2,29 +2,19 @@
 import { cryptoData } from "./mockData";
 const MarqueeCryptoNew = () => {
     return (
-        <section className="overflow-hidden ml-2">
-            <div className="container">
-                <div className="mx-auto max-w-xl text-center">
-                    <h2 className="mb-1 text-center font-display text-3xl font-medium ">
-                        METAKUL
-                    </h2>
-                </div>
-            </div>
-            <div className="">
+        <section className="overflow-hidden mb-2">
                 <div
                     className="flex flex-shrink-0 items-center justify-center rounded-2.5xl border border-jacarta-100  p-2"
                 >
                     {cryptoData.map((crypto, index) => (
-                        <div key={index} className="ml-6 flex animate-marquee space-x-8 ">
-                            <img src={crypto.icon} alt={crypto.title} className="crypto-icon" />
-                            <div className="crypto-info">
-                                <div className="crypto-title">{crypto.title}</div>
-                                <div className="crypto-price">{crypto.price}</div>
+                        <div key={index} className="ml-6 mr-6 flex animate-marquee space-x-8 ">
+                            <div className="crypto-info flex">
+                                <img src={crypto.icon} alt={crypto.title} className="crypto-icon w-8 h-8" />
+                                <div className="crypto-price  my-auto">{crypto.price}</div>
                             </div>
                         </div>
                     ))}
                 </div>
-            </div>
         </section>
 
     );

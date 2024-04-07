@@ -36,7 +36,7 @@ const MiniDrawer: React.FC<MiniDrawerProps> = ({ setIsSidebarOpen,isNonMobile, i
                 </IconButton>
             </DrawerHeader>
             <Divider />
-            <List
+            <List 
             sx={{
                 pb:8
             }}>
@@ -50,8 +50,15 @@ const MiniDrawer: React.FC<MiniDrawerProps> = ({ setIsSidebarOpen,isNonMobile, i
             <Drawer 
              variant="persistent"
              open={isSidebarOpen}
+             sx={{
+                background:"blue"
+             }}
             >
-
+ <DrawerHeader>
+                <IconButton onClick={() => setIsSidebarOpen()} >
+                    <ChevronLeftIcon />
+                </IconButton>
+            </DrawerHeader>
             <Divider />
             <List
             sx={{

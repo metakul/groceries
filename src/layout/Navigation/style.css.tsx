@@ -12,6 +12,8 @@ export const openedMixin = (theme: Theme): CSSObject => ({
     }),
     backgroundColor:theme.palette.background.default,
     overflowX: 'hidden',
+    background:'#0c831f',
+
 });
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -28,6 +30,8 @@ export const closedMixin = (theme: Theme): CSSObject => ({
     [theme.breakpoints.up('sm')]: {
         width: `calc(${theme.spacing(8)} + 1px)`,
     },
+    background:'#0c831f',
+
 });
 
 export const DrawerHeader = styled('div')(({ theme }) => ({
@@ -36,6 +40,8 @@ export const DrawerHeader = styled('div')(({ theme }) => ({
     padding: theme.spacing(0, 1),
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
+    
+
 }));
 
 interface AppBarProps extends MuiAppBarProps {
@@ -46,6 +52,7 @@ export const AppBar = styled(MuiAppBar, {
     shouldForwardProp: (prop) => prop !== 'open',
 })<AppBarProps>(({ theme, open }) => ({
     zIndex: theme.zIndex.drawer + 1,
+
     transition: theme.transitions.create(['width', 'margin'], {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen,
