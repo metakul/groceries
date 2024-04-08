@@ -1,11 +1,13 @@
 
-import { ConnectWallet } from '@thirdweb-dev/react';
+import { Button } from '@mui/material';
 
 const Tab3 = () => {
 
   return (
 
-   <ConnectWallet/>
+   <Button>
+    Hey
+   </Button>
   );
 };
 
