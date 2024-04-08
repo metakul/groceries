@@ -5,7 +5,6 @@ import Blogs from '../Components/Tab1';
 import { Tabs } from '../DataTypes/enums';
 import LoginForm from '../Components/Forms/LoginForm';
 import CustomDialog from '../Components/Dailog/Dailog';
-import MetakulCollection from '../Components/Tab2/MetakulCollection';
 import Tab3 from '../Components/Tab3';
 
 // icons
@@ -19,7 +18,7 @@ const HomePage: React.FC<HomePageProps> = () => {
 
   const tabs = [
     { value: <OtherHousesOutlinedIcon />, content: <Blogs />, label: Tabs.tabTitle1 },
-    { value: <StoreOutlinedIcon />, content: <MetakulCollection />, label: Tabs.tabTitle2 },
+    { value: <StoreOutlinedIcon />, content: <Blogs />, label: Tabs.tabTitle2 },
     { value: <CategoryOutlinedIcon />, content: <Tab3 />, label: Tabs.tabTitle3 },
     {
       value: <ContactEmergencyOutlinedIcon />, content: <CustomDialog

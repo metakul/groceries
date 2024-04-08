@@ -2297,7 +2297,7 @@ const Tab1 = () => {
 
   return (
     <div>
-      <Box className=' mt-2'>
+      <Box  className=' mt-2'>
       <Marquee />
       <FeaturedPromo/>
       </Box>

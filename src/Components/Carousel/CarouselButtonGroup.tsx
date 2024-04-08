@@ -17,7 +17,7 @@ type ButtonGroupProps = {
 
 
 const CarouselButton = (props: Props) => {
-  const theme=useTheme()
+  const theme = useTheme()
   const icon =
     props.icon === 'prev' ? (
       <ArrowBackIosNewOutlinedIcon />
@@ -26,9 +26,9 @@ const CarouselButton = (props: Props) => {
     );
   return (
     <button
-    style={{
-      background:theme.palette.secondary.dark
-        }}
+      style={{
+        background: theme.palette.secondary.dark
+      }}
       className=" h-8 w-8 _fab"
       type="button"
       onClick={props.onButtonClick}
@@ -38,23 +38,23 @@ const CarouselButton = (props: Props) => {
   );
 };
 
-const CarouselButtonGroup = ({ next, previous, ...rest }:ButtonGroupProps) => {
+const CarouselButtonGroup = ({ next, previous, ...rest }: ButtonGroupProps) => {
   const {
     carouselState: { currentSlide, slidesToShow, totalItems },
   } = rest;
 
   return (
     <>
-      <div className="w-9 flex items-center z-10 absolute right-auto top-0 bottom-0 -left-4">
-        {currentSlide !== 0 && (
+      {currentSlide !== 0 && (
+        <div className="w-9 flex items-center z-10 absolute right-auto top-0 bottom-0 -left-4">
           <CarouselButton icon="prev" onButtonClick={() => previous()} />
-        )}
-      </div>
-      <div className="w-9 flex items-center z-10 absolute top-0 -right-4 bottom-0 left-auto">
-        {currentSlide < totalItems - slidesToShow && (
+        </div>
+      )}
+      {currentSlide < totalItems - slidesToShow && (
+        <div className="w-9 flex items-center z-10 absolute top-0 -right-4 bottom-0 left-auto">
           <CarouselButton icon="next" onButtonClick={() => next()} />
-        )}
-      </div>
+        </div>
+      )}
     </>
   );
 };

@@ -43,7 +43,7 @@ const SuggestedItems = (props: Props) => {
     <div className="pb-3 flex relative mx-2">
       <div className="flex-1 overflow-auto -mr-5 -ml-1">
         <Carousel
-          swipeable={false}
+          swipeable={true} // Enable swiping
           draggable={false}
           responsive={responsive}
           arrows={false}

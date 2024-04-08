@@ -48,7 +48,7 @@ const responsive = {
   },
   minimobile: {
     breakpoint: { max: 420, min: 0 },
-    items: 1,
+    items: 2,
     slidesToSlide: 1,
     partialVisibilityGutter: -20,
   },
